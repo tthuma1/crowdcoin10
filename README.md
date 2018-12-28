@@ -1,4 +1,4 @@
-!!! README.md created by KudohAtsuo https://github.com/KudohAtsuo/kickstart !!!
+**!!! README.md created by KudohAtsuo https://github.com/KudohAtsuo/kickstart !!!**
 
 # kickstart project ==NEXT react dApp==
 
