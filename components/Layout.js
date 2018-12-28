@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 import Head from 'next/head';
 import Header from './Header';
+import Favicon from 'react-favicon';
 
 export default props => {
     return (
@@ -14,6 +15,8 @@ export default props => {
             </Head>
 
             <Header />
+            <Favicon url="https://raw.githubusercontent.com/TimThuma/crowdcoin10/master/static/favicon.ico" />
+
             {props.children}
         </Container>
     );
