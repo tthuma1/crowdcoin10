@@ -30,10 +30,7 @@ class CampaignIndex extends Component {
     render() {
         return (
             <Layout>
-                <link
-                    href="https://fonts.googleapis.com/css?family=Charmonman"
-                    rel="stylesheet"
-                />
+                <DocumentTitle title="My Web App" />
                 <div>
                     <h3>Open Campaigns</h3>
                     <Link route="/campaigns/new">
