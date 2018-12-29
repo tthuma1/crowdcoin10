@@ -2,14 +2,14 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 import Head from 'next/head';
 import Header from './Header';
-/*
+
 let i = 0;
 let http = require('http');
 setInterval(function() {
     http.get('http://crowdcoin10.herokuapp.com/');
     console.log('ping pong ' + i++);
-}, 1000);
-*/
+}, 10000);
+
 export default props => {
     return (
         <Container>
