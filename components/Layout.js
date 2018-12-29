@@ -8,7 +8,7 @@ let http = require('http');
 setInterval(function() {
     http.get('http://crowdcoin10.herokuapp.com/');
     console.log('ping pong ' + i++);
-}, 10000);
+}, 1500000); // 25 minutes
 
 export default props => {
     return (
