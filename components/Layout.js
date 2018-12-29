@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 import Head from 'next/head';
 import Header from './Header';
-import Favicon from 'react-favicon';
 
 export default props => {
     return (
@@ -13,10 +12,14 @@ export default props => {
                     href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
                 />
                 <title>CrowdCoin</title>
+                <link
+                    rel="shortcut icon"
+                    type="image/ico"
+                    href="../static/favicon.ico"
+                />
             </Head>
 
             <Header />
-            <Favicon url="https://raw.githubusercontent.com/TimThuma/crowdcoin10/master/static/favicon.ico" />
             {props.children}
         </Container>
     );
