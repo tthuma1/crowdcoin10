@@ -3,11 +3,6 @@ import { Container } from 'semantic-ui-react';
 import Head from 'next/head';
 import Header from './Header';
 
-let https = require('https');
-setInterval(function() {
-    https.get('https://crowdcoin10.herokuapp.com/');
-}, 1740000); // 28 minutes
-
 export default props => {
     return (
         <Container>

@@ -8,6 +8,11 @@ const app = next({
 const routes = require('./routes');
 const handler = routes.getRequestHandler(app);
 
+let https = require('https');
+setInterval(function() {
+    https.get('https://crowdcoin10.herokuapp.com/');
+}, 1740000); // 29 minutes
+
 app.prepare().then(() => {
     createServer(handler).listen(process.env.PORT || 3000, err => {
         if (err) throw err;
