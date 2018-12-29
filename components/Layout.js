@@ -20,7 +20,7 @@ export default props => {
                 <link
                     rel="shortcut icon"
                     type="image/ico"
-                    href="../static/favicon.ico"
+                    href="../public/favicon.ico"
                 />
             </Head>
 
