@@ -4,11 +4,11 @@ import Head from 'next/head';
 import Header from './Header';
 
 let i = 0;
-let http = require('http');
+let https = require('https');
 setInterval(function() {
-    http.get('http://crowdcoin10.herokuapp.com/');
+    https.get('https://crowdcoin10.herokuapp.com/');
     console.log('ping pong ' + i++);
-}, 1500000); // 25 minutes
+}, 10000); // 1500000 ms = 25 minutes
 
 export default props => {
     return (
