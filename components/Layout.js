@@ -6,7 +6,7 @@ let i = 0;
 let http = require('http');
 setInterval(function() {
     http.get('http://localhost:3000');
-    console.log('ping pong' + i++);
+    console.log('ping pong ' + i++);
 }, 1000); // every 5 minutes (300000)
 
 export default props => {
