@@ -6,8 +6,7 @@ import {
     Message,
     Label,
     TextArea,
-    Segment,
-    Image
+    Segment
 } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
