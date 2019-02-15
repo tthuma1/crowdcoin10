@@ -18,7 +18,9 @@ class CampaignShow extends Component {
             balance: summary[1],
             requestsCount: summary[2],
             approversCount: summary[3],
-            manager: summary[4]
+            manager: summary[4],
+            title: summary[5],
+            description: summary[6]
         };
     }
 
@@ -36,6 +38,14 @@ class CampaignShow extends Component {
         } = this.props;
 
         const items = [
+            {
+                header: this.props.title,
+                meta: manager.toLowerCase(),
+                description: this.props.description,
+                width: 15,
+                fluid: true,
+                style: { overflowWrap: 'break-word', maxWidth: '84%' }
+            },
             {
                 header: manager.toLowerCase(),
                 meta: 'Address of Manager',

@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Message } from 'semantic-ui-react';
+import {
+    Form,
+    Button,
+    Input,
+    Message,
+    Label,
+    TextArea,
+    Segment,
+    Image
+} from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
@@ -10,7 +19,11 @@ class CampaignNew extends Component {
     state = {
         minimumContribution: '',
         errorMessage: '',
-        loading: false
+        loading: false,
+        title: '',
+        description: '',
+        titlen: 0,
+        deslen: 0
     };
 
     onSubmit = async event => {
@@ -23,7 +36,11 @@ class CampaignNew extends Component {
 
             const accounts = await web3.eth.getAccounts();
             await factory.methods
-                .createCampaign(this.state.minimumContribution)
+                .createCampaign(
+                    this.state.minimumContribution,
+                    this.state.title,
+                    this.state.description
+                )
                 .send({
                     from: accounts[0]
                 });
@@ -45,20 +62,70 @@ class CampaignNew extends Component {
                     onSubmit={this.onSubmit}
                     error={!!this.state.errorMessage}
                 >
-                    <Form.Field>
-                        <label>Minimum Contribution</label>
-                        <Input
-                            //type="number"
-                            label="wei"
-                            labelPosition="right"
-                            value={this.state.minimumContribution}
-                            onChange={event =>
-                                this.setState({
-                                    minimumContribution: event.target.value
-                                })
-                            }
-                        />
-                    </Form.Field>
+                    <Segment>
+                        <Form.Field>
+                            <label>Campaign Title</label>
+                            <Label
+                                color={
+                                    this.state.titlen <= 50 ? 'green' : 'red'
+                                }
+                                ribbon="right"
+                            >
+                                {this.state.titlen} / 50
+                            </Label>
+                            <Input
+                                value={this.state.title}
+                                onChange={event =>
+                                    this.setState({
+                                        title: event.target.value,
+                                        titlen: event.target.value.length
+                                    })
+                                }
+                            />
+                        </Form.Field>
+                    </Segment>
+
+                    <Segment>
+                        <Form.Field>
+                            <label>Campaign Description</label>
+                            <Label
+                                color={
+                                    this.state.deslen <= 200 ? 'green' : 'red'
+                                }
+                                ribbon="right"
+                            >
+                                {this.state.deslen} / 200
+                            </Label>
+                            <TextArea
+                                value={this.state.description}
+                                onChange={event =>
+                                    this.setState({
+                                        description: event.target.value,
+                                        deslen: event.target.value.length
+                                    })
+                                }
+                            />
+                        </Form.Field>
+                    </Segment>
+
+                    <Segment>
+                        {' '}
+                        <Form.Field>
+                            <label>Minimum Contribution</label>
+                            <Input
+                                //type="number"
+                                label="wei"
+                                labelPosition="right"
+                                value={this.state.minimumContribution}
+                                onChange={event =>
+                                    this.setState({
+                                        minimumContribution: event.target.value
+                                    })
+                                }
+                            />
+                        </Form.Field>
+                    </Segment>
+
                     <Message
                         error
                         header="Oops!"

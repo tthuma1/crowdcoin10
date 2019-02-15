@@ -4,8 +4,4 @@ node_modules/
 ethereum/compile.js
 ethereum/deploy.js
 /test
-<<<<<<< HEAD
 ADDRESS
-=======
-ADDRESS
->>>>>>> df40ff27026e3ac2354e343ebaf01af7f0371069

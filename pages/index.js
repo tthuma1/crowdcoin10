@@ -1,30 +1,70 @@
 import React, { Component } from 'react';
 import factory from '../ethereum/factory';
-import { Card, Button } from 'semantic-ui-react';
+import { Card, Button, Icon } from 'semantic-ui-react';
 import Layout from '../components/Layout';
 import { Link } from '../routes';
+import Campaign from '../ethereum/campaign';
 
 class CampaignIndex extends Component {
     static async getInitialProps() {
         const campaigns = await factory.methods.getDeployedCampaigns().call();
+        let campaign;
+        let summary;
+        let titles = [];
+        let descriptions = [];
 
-        return { campaigns }; // === return { campaigns: campaigns }
+        for (var i = 0; i < campaigns.length; i++) {
+            campaign = Campaign(campaigns[i]);
+            summary = await campaign.methods.getSummary().call();
+            titles.push(summary[5]);
+            descriptions.push(summary[6]);
+        }
+
+        return { campaigns, titles, descriptions }; // === return { campaigns: campaigns }
     }
 
     renderCampaigns() {
-        const items = this.props.campaigns.map(address => {
-            return {
-                header: address.toLowerCase(),
-                description: (
-                    <Link route={`/campaigns/${address}`}>
-                        <a>View Campaign</a>
-                    </Link>
-                ),
-                fluid: true
-            };
-        });
+        let address;
+        let items = [];
 
-        return <Card.Group items={items} />;
+        for (var i = 0; i < this.props.campaigns.length; i++) {
+            address = this.props.campaigns[i];
+
+            items.push(
+                <Card fluid key={i}>
+                    <Card.Content>
+                        <Link route={`/campaigns/${address}`}>
+                            <a>
+                                <Button
+                                    primary // === primary={true}
+                                    floated="right"
+                                >
+                                    View Campaign
+                                    <Icon name="chevron circle right" />
+                                </Button>
+                            </a>
+                        </Link>
+                        <Card.Header>
+                            {
+                                this.props.titles[
+                                    this.props.campaigns.indexOf(address)
+                                ]
+                            }
+                        </Card.Header>
+                        <Card.Meta>{address.toLowerCase()}</Card.Meta>
+                        <Card.Description>
+                            {
+                                this.props.descriptions[
+                                    this.props.campaigns.indexOf(address)
+                                ]
+                            }
+                        </Card.Description>
+                    </Card.Content>
+                </Card>
+            );
+        }
+
+        return <Card.Group>{items}</Card.Group>;
     }
 
     render() {
