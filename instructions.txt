@@ -1,0 +1,8 @@
+1. In order to intereact with CrowdCoin you must first have MetaMask Chrome extension installed on the browser. You can add it to your browser here https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
+There is also an introduction video on this page, so you can use it to get started with MetaMask.
+2. Then you will need to get some fake ETH on Rinkeby test network. You can get some from this Rinkeby faucet https://faucet.rinkeby.io/
+In order to get ETH from the faucet you must make a new post on either Twitter, Facebook or Google Plus (in this case I used Twitter) containing only your wallet address. Example: https://serving.photos.photobox.com/1069499460671225de6bd055fca9b475d602e032ae590a85caad9e25ce278efd6394ef6c.jpg
+Then copy your posts link (circled blue in the picture) and paste it into the faucet's search bar (https://faucet.rinkeby.io/)
+3. Next to the search bar there is a button that says 'Give me Ether'. Click it and from the dropdown you can choose how much ETH you want. Once you select a value, Ether should come to your faucet in about 15-30 seconds.
+4. That's it! You're all set up to start interacting with the Dapp. Make sure that everytime you interact with the Dapp, you have selected Rinkeby test net (https://serving.photos.photobox.com/15989932af73188d9a6e212e889262b8883117b39de29cd6e8a4c26e35bdaefdf3a6a4df.jpg
+5. Every time when you call a transaction, MetaMask will pop up and you can edit gas fee, submit or reject the transaction. Have fun!
