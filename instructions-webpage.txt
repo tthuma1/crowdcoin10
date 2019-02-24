@@ -1,0 +1,25 @@
+1. Homepage (https://serving.photos.photobox.com/847768689490180ee57fedb9d16fb056c99ecdba6ab5fc8cddc562006394f01b78901e1e.jpg )
+This is the place where you can see all of open campaigns and also open new ones. To view an individual campaign, you have to press the "View Campaign" button (circled green in the picture). But first we'll take a look  at how to create a campaign. To do this, you first have to click the "Create Campaign" button, which will take you to https://crowdcoin10.herokuapp.com/campaigns/new
+
+2. Creating a campaign (https://serving.photos.photobox.com/65910647ed3bc2a4b21eea382aca408f0c9fce57ef58991fac0f4144339d9d08551b51a2.jpg )
+To create a campaign, you must first fill all parts of the form - title (50 or less letters), description (200 or less letters) and minimum contribution (this is the amount that someone has to pay in order to become a contributor - more on this later; the minimum coontribution you enter, must be a value in WEI - to convert from ether to wei, you can use this converter https://etherconverter.online/ ).
+Once you fill in all fields, press the "Create!" button. Then a MetaMask window should pop-up like this (https://serving.photos.photobox.com/46681051c10f1ffce7792ce106fc1ec822f050f29568f770ef5463a61292ec1d8e1dfe8c.jpg ). To confirm the creation of a campaign, click the "Confirm button" (circled red in the picture). Then, you must wait for about 20 seconds for the transaction to be competed. After that you will get redirected to the home page, where you should see your newly created campaign. If your campaign doesn't show after you've been redirected, refresh the page.
+
+3. Individual campaign (https://serving.photos.photobox.com/2126631600697f172f10dafe18816b0c504877a1783ac2475e7ac6a3e9863048ada5d53f.jpg )
+After you've clicked on the "View Campaign" button on home page, you'll be taken to the page of an individual campaign. First you can see some basic information about the campaign. Right to the information, you can contribute to the campaign you're viewing. To do so, just enter the amount of ETHER, you want to contribute and click "Contribute!". Then confirm the transaction as before. When you contribute to a campaign, you'll be marked as a contributor.
+A contributor is able to vote on every withdrawal request, that the manager (creator of the campaign) makes. If a single request gets more than half of all votes, it can be executed. You can view all open requests by clicking the "View Requests" button (circled red in the picture).
+If you no longer wish for a campaign to have your money, you can always refund it. You can do this by clicking the "Refund" button (circled blue in the picture). Note that if some money was already withdrawn from the campaign, the amout you'll get from refunding will be smaller.
+
+4. Viewing requests (https://serving.photos.photobox.com/41118086f05d627d8a06768b213e68270e253be1d5d2a2e464f0eb2d0ced7648c44c6670.jpg )
+When you click the "View requests" button, you'll see every request that has been open. In the picture, there are shown 3 types of requests. 
+ID = 0 The request got more than half of all votes (2 out of 3), so it can be finalized (the money can be withdrawn). Its text is green colored.
+ID = 1 The request is already finalized. The text is grey colored.
+ID = 2 The request currently has less than half votes (1 out of 3), so it can't be finalized yet.
+If you are an approver, you can approve an individual request by clicking the "Approve" button (circled green in the picture). Then confirm the transaction and the amount of people that approved the request will rise. If you don't want to approve the request, you just have to ignore it (there is no 'reject' button).
+If you are the manager of a campaign , you can finalize the request after it gets more than a half votes. You can do so by clicking the "Finalize" button (circled blue in the picture). By doing so, the amount specified when making the request will get sent to the address thatyou specified.
+If you are the manager of a campaign and you wish to add a new request to the campaign, you can do so by clicking the "Add Request" button (circled red in the picture).
+
+5. Making a new request (https://serving.photos.photobox.com/7202054948a2c3c76bee78a9b057ffbd95bef1ffbc26c0ced16e1164671648c1ffb43b3a.jpg )
+Note that you can only make new requests if you're the manager of a campaign. First you have to fill all parts of the form - description, value to be sent from the contract (in ETHER) and the address of the recipient. Once you've done that, just click the "Create!" button and confirm the transaction. After the transaction is completed, you'll get redirected to the page with all campaign's requests, where you'll be able to see the new request.
+
+That's it! Remember to have fun!
