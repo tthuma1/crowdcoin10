@@ -41,5 +41,8 @@
     },
     "plugins": [
         "styled-jsx/babel"
-    ]
+    ],
+    "engines": {
+        "node": "8.11.3"
+    }
 }
