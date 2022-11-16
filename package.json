@@ -22,7 +22,7 @@
         "mocha": "^4.1.0",
         "module": "^1.2.5",
         "net": "^1.0.2",
-        "next": "^4.2.3",
+        "next": "^13.0.3",
         "next-routes": "^1.4.2",
         "now": "^12.1.14",
         "object-merge": "^2.5.1",
@@ -33,11 +33,11 @@
         "semantic-ui-react": "^0.77.1",
         "solc": "^0.4.25",
         "styled-components": "^4.0.2",
-        "styled-jsx": "^3.1.0",
+        "styled-jsx": "^5.1.0",
         "truffle-hdwallet-provider": "0.0.6",
         "truffle-hdwallet-provider-privkey": "^0.3.0",
         "web3": "^1.0.0-beta.26",
-        "webpack": "^2.5.1"
+        "webpack": "^5.75.0"
     },
     "plugins": [
         "styled-jsx/babel"
